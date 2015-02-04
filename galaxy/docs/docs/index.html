@@ -1,0 +1,114 @@
+<!DOCTYPE html><html><head><title>Galaxy Basics</title><meta name="description" content="Learn how easy it is to build components with Galaxy!"><link rel="icon" href="/img/favicon.png"><link rel="stylesheet" href="/css/galaxy.css"><link rel="stylesheet" href="/css/docs.css"><link rel="stylesheet" href="/plugins/highlight/styles/tomorrow.css"></head></html><body ondragstart="return false"><header><a href="/"><img src="/media/logo-dark.png" alt="Galaxy" width="75"></a><nav st-role="target" st-group="header"><ul><li><a href="/docs/" class="active">Getting Started</a></li><li><a href="/components">Components</a></li><li><a href="https://github.com/Magmoz/galaxy" target="_blank">Github Repo</a></a></li></ul></nav><a st-role="trigger" st-group="header" st-state="expanded" g="toggle"></a></header><div class="banner"><h2 g="text-center">The beginner's guide to Galaxy</h2></div><section g="center xlg-container"><aside g="lg-padding-lr lg-padding-t" style="border-right: #ddd 1px solid"><ul><li><a href="/docs/" class="active">Overview</a></li><li><a href="/docs/building-components">Building Components</a></li><li><a href="/docs/states">State toggling</a></li><li>Contributing</li></ul></aside><div g="10 lg-container lg-padding content"><p><video src="/media/primary-button.mp4" width="700" autoplay="true"></video></p>
+<h2>Using custom attributes in HTML</h2>
+<p>Galaxy uses the <strong>g</strong> attribute instead of styling with <strong>class</strong> in order to write modular code while maintaining its semantic nature.</p>
+<p>Most frameworks you&#39;ve come across have used the <a href="https://smacss.com/">Smacss</a> naming convention. </p>
+<p>It&#39;s best practice to use the <strong>class</strong> attribute only for toggling states.</p>
+<h2>Styling with custom attributes</h2>
+<p>Galaxy uses the <strong>g</strong> attribute to style elements and <strong>class</strong> attribute to toggle states. The purpose of this is to eliminate the need for prefixing while creating modular and more semantic code.</p>
+<h4>Example Button</h4>
+<pre class="language-markup"><code>
+&lt;button g="centered primary">Create Page&lt;/button>        
+</code></pre>
+
+<p>Imagine you were creating a button for an app for Facebook.com:</p>
+<pre class="language-markup"><code>
+&lt;button g="centered primary" fb="sign_up">Create Page&lt;/button>
+</code></pre>
+In this example, `centered primary` pertains to the Galaxy framework, while `create_page` describes the role of the button specific to Facebook.com.
+
+It's not recommended to use class to style components, as this can create a redundant pile of 
+
+#### Styling custom attributes
+It's just as easy styling custom attributes 
+
+
+<pre class="language-css"><code>
+[myapp~="error"] {
+    color: #c82829;
+}
+</code></pre>
+
+
+<!-- ## Compiling Sass and Javascript
+### Installing Grunt
+
+Galaxy uses Grunt as its task runner. To install Grunt you first need <a href="http://nodejs.org/download/" data-tooltip="sudo brew install nodejs">Node.js</a> installed (which includes Node Package Manager).
+
+Then, from the command line:
+
+- Install Grunt <pre class="language-bash"><code>sudo npm install -g grunt-cli</code></pre>
+- Navigate to the <strong>/galaxy/</strong> directory and run <strong>sudo npm install</strong> to look for the <strong>package.json</strong> and install all dependencies.
+
+#### Then simply run <strong>grunt</strong> to watch all SASS and Javascript files.
+
+## Toggling States with HTML
+
+You can create state-toggling with with <strong>galaxy.js</strong> and the <strong>class</strong> attribute. Below is a simple example of a div that is applied the active class when a corresponding button is clicked: -->
+
+<pre><code class="language-markup">
+&lt;!-- The element being interacted with (the trigger)
+&lt;button st-role="trigger" st-state="active" st-group="example1">&lt;/button>
+&lt;!-- The element that is getting the `st-state` appled to (the target): -->
+&lt;div st-role="target" st-group="example1">
+</code></pre>
+
+<p>In the above example, <strong>st-role</strong> defines whether the element is being interacted with or getting applied classes. In this case the button is the <strong>trigger</strong> and the div is the <strong>target</strong> being applied a class of <strong>.active</strong>.</p>
+<p><strong>st-state</strong> is the class that is going to be applied to <strong>st-role=&quot;target&quot;</strong> when the <strong>st-role=&quot;trigger&quot;</strong> is clicked.</p>
+<p>Finally, in order for Galaxy to establish a relationship between these two elements they need to be within the same <strong>st-group</strong>. In this case a relationship is created as both elements have an <strong>st-group</strong> of <strong>example1</strong>.</p>
+<h2>Browser and Device Support</h2>
+<p>Galaxy supports all modern browsers, but to remain cutting edge, Galaxy does not guarantee to support on legacy browsers such as Internet Explorer 9 and below.</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th>Chrome</th>
+<th>Firefox</th>
+<th>Internet Explorer</th>
+<th>Safari</th>
+<th>Opera</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Mac</td>
+<td>✓</td>
+<td>✓</td>
+<td>Never</td>
+<td>✓</td>
+<td>×</td>
+</tr>
+<tr>
+<td align="center">Windows</td>
+<td>✓</td>
+<td>✓</td>
+<td>Never</td>
+<td>✓</td>
+<td>×</td>
+</tr>
+<tr>
+<td align="center">Linux</td>
+<td>✓</td>
+<td>✓</td>
+<td>Never</td>
+<td>N/A</td>
+<td>×</td>
+</tr>
+<tr>
+<td align="center">Android</td>
+<td>✓</td>
+<td>✓</td>
+<td>Never</td>
+<td>N/A</td>
+<td>×</td>
+</tr>
+<tr>
+<td align="center">iOS</td>
+<td>✓</td>
+<td>✓</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>×</td>
+</tr>
+</tbody>
+</table>
+</div></section><div g="centered lg-padding md-margin-t" class="banner"><h3>Start your next project with Galaxy</h3><a href="https://github.com/Magmoz/galaxy/archive/master.zip"><button g="center success sm-margin-t sm-margin-b">Download Galaxy</button></a><br/><a href="https://github.com/Magmoz/galaxy">View it on Github</a></div><footer><a g="sm-padding"></a><ul g="centered"><li>Designed and maintained by <a href="//twitter.com/andyfang98">@AndyFang98</a></li></ul><ul g="centered md-padding"><li style="margin-right: 2em;"><a class="github-button" href="https://github.com/Magmroz/galaxy" data-count-href="/Magmoz/galaxy/stargazers" data-count-api="/repos/Magmoz/galaxy#stargazers_count">Star</a></li><li><a class="github-button" href="https://github.com/Magmoz/galaxy" data-icon="octicon-git-branch" data-count-href="/Magmoz/galaxy/network" data-count-api="/repos/Magmoz/galaxy#forks_count">Fork</a>	</li></ul></footer><script src="/js/jquery.js"></script><script src="/js/galaxy.js"></script><script src="/js/prism.js"></script><script src="/js/home.js"></script><script src="/js/docs.js"></script><script async="async" defer="defer" id="github-bjs" src="https://buttons.github.io/buttons.js"></script></body>

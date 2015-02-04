@@ -1,0 +1,54 @@
+<!DOCTYPE html><html><head><title>Galaxy UI</title><meta name="description" content="The front-end framework based on conversational language."><link rel="icon" href="/img/favicon.png"><link rel="stylesheet" href="/css/galaxy.css"><link rel="stylesheet" href="/css/docs.css"><link rel="stylesheet" href="/plugins/highlight/styles/tomorrow.css"></head><body ondragstart="return false"><header><a href="/"><img src="/media/logo-dark.png" alt="Galaxy" width="75"/></a><nav><ul><li><a href="/docs/">Getting Started</a></li><li><a href="/components">Components</a></li><li><a href="https://github.com/Magmoz/galaxy" target="_blank">Github Repo</a></li></ul></nav></header><h1>Highlight.js</h1>
+<p>Highlight.js — это подсветчик синтаксиса, написанный на JavaScript. Он работает
+и в браузере, и на сервере. Он работает с практически любой HTML разметкой, не
+зависит от каких-либо фреймворков и умеет автоматически определять язык.</p>
+<h2>Начало работы</h2>
+<p>Минимум, что нужно сделать для использования highlight.js на веб-странице — это
+подключить библиотеку, CSS-стили и вызывать <a href="http://highlightjs.readthedocs.org/en/latest/api.html#inithighlightingonload"><code>initHighlightingOnLoad</code></a>:</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/styles/default.css&quot;&gt;
+&lt;script src=&quot;/path/to/highlight.pack.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;</code></pre>
+<p>Библиотека найдёт и раскрасит код внутри тегов <code>&lt;pre&gt;&lt;code&gt;</code>, попытавшись
+автоматически определить язык. Когда автоопределение не срабатывает, можно явно
+указать язык в атрибуте class:</p>
+<pre><code class="language-html">&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;</code></pre>
+<p>Список поддерживаемых классов языков доступен в <a href="http://highlightjs.readthedocs.org/en/latest/css-classes-reference.html">справочнике по классам</a>.
+Класс также можно предваоить префиксами <code>language-</code> или <code>lang-</code>.</p>
+<p>Чтобы отключить подсветку для какого-то блока, используйте класс <code>nohighlight</code>:</p>
+<pre><code class="language-html">&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;</code></pre>
+<h2>Инициализация вручную</h2>
+<p>Чтобы иметь чуть больше контроля за инициализацией подсветки, вы можете
+использовать функции <a href="http://highlightjs.readthedocs.org/en/latest/api.html#highlightblock-block"><code>highlightBlock</code></a> и <a href="http://highlightjs.readthedocs.org/en/latest/api.html#configure-options"><code>configure</code></a>. Таким образом
+можно управлять тем, <em>что</em> подсвечивать и <em>когда</em>.</p>
+<p>Вот пример инициализация, эквивалентной вызову <a href="http://highlightjs.readthedocs.org/en/latest/api.html#inithighlightingonload"><code>initHighlightingOnLoad</code></a>, но
+с использованием jQuery:</p>
+<pre><code class="language-javascript">$(document).ready(function() {
+  $(&#39;pre code&#39;).each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});</code></pre>
+<p>Вы можете использовать любые теги разметки вместо <code>&lt;pre&gt;&lt;code&gt;</code>. Если
+используете контейнер, не сохраняющий переводы строк, вам нужно сказать
+highlight.js использовать для них тег <code>&lt;br&gt;</code>:</p>
+<pre><code class="language-javascript">hljs.configure({useBR: true});
+
+$(&#39;div.code&#39;).each(function(i, block) {
+  hljs.highlightBlock(block);
+});</code></pre>
+<p>Другие опции можно найти в документации функции <a href="http://highlightjs.readthedocs.org/en/latest/api.html#configure-options"><code>configure</code></a>.</p>
+<h2>Установка библиотеки</h2>
+<p>Highlight.js можно использовать в браузере прямо с CDN хостинга или скачать
+индивидуальную сборку, а также установив модуль на сервере. На
+<a href="https://highlightjs.org/download/">страница загрузки</a> подробно описаны все варианты.</p>
+<p>Обратите внимание, что библиотека не предназначена для использования в виде
+исходного кода на GitHub, а требует отдельной сборки. Если вам не подходит ни
+один из готовых вариантов, читайте <a href="http://highlightjs.readthedocs.org/en/latest/building-testing.html">документацию по сборке</a>.</p>
+<h2>Лицензия</h2>
+<p>Highlight.js распространяется под лицензией BSD. Подробнее читайте файл
+<a href="https://github.com/isagalaev/highlight.js/blob/master/LICENSE">LICENSE</a>.</p>
+<h2>Ссылки</h2>
+<p>Официальный сайт билиотеки расположен по адресу <a href="https://highlightjs.org/">https://highlightjs.org/</a>.</p>
+<p>Более подробная документация по API и другим темам расположена на
+<a href="http://highlightjs.readthedocs.org/">http://highlightjs.readthedocs.org/</a>.</p>
+<p>Авторы и контрибьютора перечислена в файле <a href="https://github.com/isagalaev/highlight.js/blob/master/AUTHORS.ru.txt">AUTHORS.ru.txt</a> file.</p>
+<div g="centered lg-padding md-margin-t" class="banner"><h3>Start your next project with Galaxy</h3><a href="https://github.com/Magmoz/galaxy/archive/master.zip"><button g="center success sm-margin-t sm-margin-b">Download Galaxy</button></a><br/><a href="https://github.com/Magmoz/galaxy">View it on Github</a></div><footer><a g="sm-padding"></a><ul g="centered"><li>Designed and maintained by <a href="//twitter.com/andyfang98">@AndyFang98</a></li></ul><ul g="centered md-padding"><li style="margin-right: 2em;"><a class="github-button" href="https://github.com/Magmroz/galaxy" data-count-href="/Magmoz/galaxy/stargazers" data-count-api="/repos/Magmoz/galaxy#stargazers_count">Star</a></li><li><a class="github-button" href="https://github.com/Magmoz/galaxy" data-icon="octicon-git-branch" data-count-href="/Magmoz/galaxy/network" data-count-api="/repos/Magmoz/galaxy#forks_count">Fork</a>	</li></ul></footer><script src="/js/jquery.js"></script><script src="/js/galaxy.js"></script><script src="/js/prism.js"></script><script src="/js/home.js"></script><script src="/js/docs.js"></script><script async="async" defer="defer" id="github-bjs" src="https://buttons.github.io/buttons.js"></script></body></html>

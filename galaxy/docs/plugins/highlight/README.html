@@ -1,0 +1,53 @@
+<!DOCTYPE html><html><head><title>Galaxy UI</title><meta name="description" content="The front-end framework based on conversational language."><link rel="icon" href="/img/favicon.png"><link rel="stylesheet" href="/css/galaxy.css"><link rel="stylesheet" href="/css/docs.css"><link rel="stylesheet" href="/plugins/highlight/styles/tomorrow.css"></head><body ondragstart="return false"><header><a href="/"><img src="/media/logo-dark.png" alt="Galaxy" width="75"/></a><nav><ul><li><a href="/docs/">Getting Started</a></li><li><a href="/components">Components</a></li><li><a href="https://github.com/Magmoz/galaxy" target="_blank">Github Repo</a></li></ul></nav></header><h1>Highlight.js</h1>
+<p><a href="https://travis-ci.org/isagalaev/highlight.js"><img src="https://travis-ci.org/isagalaev/highlight.js.svg?branch=master" alt="Build Status"></a></p>
+<p>Highlight.js is a syntax highlighter written in JavaScript. It works in the
+browser as well as on the server. It works with pretty much any markup,
+doesn&#39;t depend on any framework and has automatic language detection.</p>
+<h2>Getting Started</h2>
+<p>The bare minimum for using highlight.js on a web page is linking to the library
+along with one of the styles and calling <a href="http://highlightjs.readthedocs.org/en/latest/api.html#inithighlightingonload"><code>initHighlightingOnLoad</code></a>:</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/styles/default.css&quot;&gt;
+&lt;script src=&quot;/path/to/highlight.pack.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;</code></pre>
+<p>This will find and highlight code inside of <code>&lt;pre&gt;&lt;code&gt;</code> tags trying to detect
+the language automatically. If automatic detection doesn&#39;t work for you, you can
+specify the language in the class attribute:</p>
+<pre><code class="language-html">&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;</code></pre>
+<p>The list of supported language classes is available in the <a href="http://highlightjs.readthedocs.org/en/latest/css-classes-reference.html">class reference</a>.
+Classes can also be prefixed with either <code>language-</code> or <code>lang-</code>.</p>
+<p>To disable highlighting altogether use the <code>nohighlight</code> class:</p>
+<pre><code class="language-html">&lt;pre&gt;&lt;code class=&quot;nohighlight&quot;&gt;...&lt;/code&gt;&lt;/pre&gt;</code></pre>
+<h2>Custom Initialization</h2>
+<p>When you need a bit more control over the initialization of
+highlight.js, you can use the <a href="http://highlightjs.readthedocs.org/en/latest/api.html#highlightblock-block"><code>highlightBlock</code></a> and <a href="http://highlightjs.readthedocs.org/en/latest/api.html#configure-options"><code>configure</code></a>
+functions. This allows you to control <em>what</em> to highlight and <em>when</em>.</p>
+<p>Here&#39;s an equivalent way to calling <a href="http://highlightjs.readthedocs.org/en/latest/api.html#inithighlightingonload"><code>initHighlightingOnLoad</code></a> using jQuery:</p>
+<pre><code class="language-javascript">$(document).ready(function() {
+  $(&#39;pre code&#39;).each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+});</code></pre>
+<p>You can use any tags instead of <code>&lt;pre&gt;&lt;code&gt;</code> to mark up your code. If you don&#39;t
+use a container that preserve line breaks you will need to configure
+highlight.js to use the <code>&lt;br&gt;</code> tag:</p>
+<pre><code class="language-javascript">hljs.configure({useBR: true});
+
+$(&#39;div.code&#39;).each(function(i, block) {
+  hljs.highlightBlock(block);
+});</code></pre>
+<p>For other options refer to the documentation for <a href="http://highlightjs.readthedocs.org/en/latest/api.html#configure-options"><code>configure</code></a>.</p>
+<h2>Getting the Library</h2>
+<p>You can get highlight.js as a hosted or custom-build browser script or as a
+server module. Head over to the <a href="https://highlightjs.org/download/">download page</a> for all the options.</p>
+<p>Note, that the library is not supposed to work straight from the source on
+GitHub, it requires building. If none of the pre-packaged options work for you
+refer to the <a href="http://highlightjs.readthedocs.org/en/latest/building-testing.html">building documentation</a>.</p>
+<h2>License</h2>
+<p>Highlight.js is released under the BSD License. See <a href="https://github.com/isagalaev/highlight.js/blob/master/LICENSE">LICENSE</a> file for
+details.</p>
+<h2>Links</h2>
+<p>The official site for the library is at <a href="https://highlightjs.org/">https://highlightjs.org/</a>.</p>
+<p>Further in-depth documentation for the API and other topics is at
+<a href="http://highlightjs.readthedocs.org/">http://highlightjs.readthedocs.org/</a>.</p>
+<p>Authors and contributors are listed in the <a href="https://github.com/isagalaev/highlight.js/blob/master/AUTHORS.en.txt">AUTHORS.en.txt</a> file.</p>
+<div g="centered lg-padding md-margin-t" class="banner"><h3>Start your next project with Galaxy</h3><a href="https://github.com/Magmoz/galaxy/archive/master.zip"><button g="center success sm-margin-t sm-margin-b">Download Galaxy</button></a><br/><a href="https://github.com/Magmoz/galaxy">View it on Github</a></div><footer><a g="sm-padding"></a><ul g="centered"><li>Designed and maintained by <a href="//twitter.com/andyfang98">@AndyFang98</a></li></ul><ul g="centered md-padding"><li style="margin-right: 2em;"><a class="github-button" href="https://github.com/Magmroz/galaxy" data-count-href="/Magmoz/galaxy/stargazers" data-count-api="/repos/Magmoz/galaxy#stargazers_count">Star</a></li><li><a class="github-button" href="https://github.com/Magmoz/galaxy" data-icon="octicon-git-branch" data-count-href="/Magmoz/galaxy/network" data-count-api="/repos/Magmoz/galaxy#forks_count">Fork</a>	</li></ul></footer><script src="/js/jquery.js"></script><script src="/js/galaxy.js"></script><script src="/js/prism.js"></script><script src="/js/home.js"></script><script src="/js/docs.js"></script><script async="async" defer="defer" id="github-bjs" src="https://buttons.github.io/buttons.js"></script></body></html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html><html><head><title>Galaxy Basics</title><meta name="description" content="Learn how easy it is to build components with Galaxy!"><link rel="icon" href="/img/favicon.png"><link rel="stylesheet" href="/css/galaxy.css"><link rel="stylesheet" href="/css/docs.css"><link rel="stylesheet" href="/plugins/highlight/styles/tomorrow.css"></head></html><body ondragstart="return false"><header><a href="/"><img src="/media/logo-dark.png" alt="Galaxy" width="75"></a><nav st-role="target" st-group="header"><ul><li><a href="/docs/" class="active">Getting Started</a></li><li><a href="/components">Components</a></li><li><a href="https://github.com/Magmoz/galaxy" target="_blank">Github Repo</a></a></li></ul></nav><a st-role="trigger" st-group="header" st-state="expanded" g="toggle"></a></header><div class="banner"><h2 g="text-center">The beginner's guide to Galaxy</h2></div><section g="center xlg-container"><aside g="lg-padding-lr lg-padding-t" style="border-right: #ddd 1px solid"><ul><li><a href="/docs/">Overview</a></li><li><a href="/docs/building-components">Building Components</a></li><li><a href="/docs/states">State toggling</a></li><li>Contributing</li></ul></aside><div g="10 lg-container lg-padding content"><h3>Step 1: Include Galaxy</h3>
+<h4>via the CDN</h4>
+<p>The quickest way to use Galaxy is by including it in your project&#39;s <code>&lt;head&gt;</code> tag.</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://galaxyui.com/galaxy/galaxy.css&quot;&gt;
+&lt;script src=&quot;https://galaxyui.com/galaxy/galaxy.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p>This will always link to the latest version of Galaxy.</p>
+<h4>clone a local copy</h4>
+<p>The advantage of having a local copy is that you can customize Galaxy simply by changing <code>_settings.scss</code>, and letting Grunt compile the core CSS.</p>
+<h5>Grab a local copy from the repo</h5>
+<p>Make sure you have <a href="http://nodejs.org/download/">Node</a>, <a data-tooltip="npm install git">Git</a> and <a data-tooltip="npm install grunt">Grunt</a> installed. Once you have, clone the latest version of Galaxy:
+<code>git clone https://github.com/Magmoz/galaxy</code></p>
+<h5>Setup grunt</h5>
+<p>Run the command below to install the <code>node_modules</code> needed in order to use Grunt</p>
+<pre><code>cd galaxy &amp;&amp; npm install</code></pre>
+<h5>Running Grunt to compile Sass</h5>
+<p>After running <code>grunt</code> on the CLI, any changes you make to <code>galaxy/_settings.scss</code> will get compiled to <code>galaxy.css</code>. You can also import/ remove Galaxy plugins by editing <code>galaxy.scss</code>.</p>
+<h3>Customization</h3>
+<h4><a href="https://github.com/Magmoz/galaxy/blob/master/galaxy.scss">galaxy.scss</a></h4>
+<p>This is the file containing all the Sass imports. You can add or remove imports to change what is in the compiled <code>galaxy.css</code>.</p>
+<h4><a href="https://github.com/Magmoz/galaxy/blob/master/galaxy/_settings.scss">_settings.scss</a></h4>
+<p>This is used to override Sass variables in <a href="https://github.com/Magmoz/galaxy/blob/master/galaxy/_globals.scss"><code>_globals.scss</code></a>. You&#39;ll be able to change things like color, padding and borders to develop a consistent theme for your design.</p>
+</div></section><div g="centered lg-padding md-margin-t" class="banner"><h3>Start your next project with Galaxy</h3><a href="https://github.com/Magmoz/galaxy/archive/master.zip"><button g="center success sm-margin-t sm-margin-b">Download Galaxy</button></a><br/><a href="https://github.com/Magmoz/galaxy">View it on Github</a></div><footer><a g="sm-padding"></a><ul g="centered"><li>Designed and maintained by <a href="//twitter.com/andyfang98">@AndyFang98</a></li></ul><ul g="centered md-padding"><li style="margin-right: 2em;"><a class="github-button" href="https://github.com/Magmroz/galaxy" data-count-href="/Magmoz/galaxy/stargazers" data-count-api="/repos/Magmoz/galaxy#stargazers_count">Star</a></li><li><a class="github-button" href="https://github.com/Magmoz/galaxy" data-icon="octicon-git-branch" data-count-href="/Magmoz/galaxy/network" data-count-api="/repos/Magmoz/galaxy#forks_count">Fork</a>	</li></ul></footer><script src="/js/jquery.js"></script><script src="/js/galaxy.js"></script><script src="/js/prism.js"></script><script src="/js/home.js"></script><script src="/js/docs.js"></script><script async="async" defer="defer" id="github-bjs" src="https://buttons.github.io/buttons.js"></script></body>
