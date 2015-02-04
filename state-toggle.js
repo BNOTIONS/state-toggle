@@ -56,8 +56,11 @@ $(function() {
     event.stopPropagation();
   });
 
-  $('[st-default="on"]').each(function(index){
-    stateToggle(this, true);
+  $('[st-default]').each(function(index){
+    var defaultAttr = $(this).attr('st-default');
+    if (defaultAttr === "on"){
+      stateToggle(this, true);  
+    }    
   });
 
 });
