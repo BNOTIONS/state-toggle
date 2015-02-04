@@ -1,7 +1,7 @@
 $(function() {
-  $('[st-role="trigger"]').on('click',function(event){  
-    event.stopPropagation();
-    var $this = $(this),
+
+  var stateToggle = function(element, forceOn) {
+    var $this = $(element),
     $scope = $this.parents('[st-contain]').length ? $this.parents('[st-contain]') : $(document),
     whichGroup = $this.attr('st-group'),
     $whichTriggers = $('[st-role="trigger"][st-group="' + whichGroup + '"]'),
@@ -26,7 +26,7 @@ $(function() {
           }
         }
         else {
-          if(!$this.hasClass('st-activated')){
+          if(forceOn || !$this.hasClass('st-activated')){
             $inactiveTriggers.removeClass('st-activated');
             $this.addClass('st-activated');
           }
@@ -38,9 +38,13 @@ $(function() {
           }
           $removeTarget.removeClass(stateRemove);
           $toggleTarget.toggleClass(whichState);  
-        }
-      
+        }      
     }
+  };
+
+  $('[st-role="trigger"]').on('click',function(event){  
+    event.stopPropagation();
+    stateToggle(this, false);
   });
 
   $('[st-role="activate"]').on('click',function(){
@@ -51,4 +55,9 @@ $(function() {
   $('[st-role="target"]').on('click',function(event){
     event.stopPropagation();
   });
+
+  $('[st-default="on"]').each(function(index){
+    stateToggle(this, true);
+  });
+
 });
