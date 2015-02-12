@@ -1,0 +1,13 @@
+/**/callback({
+  "meta": {
+    "X-RateLimit-Limit": "60",
+    "X-RateLimit-Remaining": "0",
+    "X-RateLimit-Reset": "1419224165",
+    "X-GitHub-Media-Type": "github.v3",
+    "status": 403
+  },
+  "data": {
+    "message": "API rate limit exceeded for 209.141.185.137. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)",
+    "documentation_url": "https://developer.github.com/v3/#rate-limiting"
+  }
+})

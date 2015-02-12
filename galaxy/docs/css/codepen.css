@@ -1,0 +1,33 @@
+body {
+  overflow: hidden;
+  margin-top: 1em;
+}
+
+#css-link, #js-link {
+	display: none;
+}
+
+#rerun-button {
+	display: none;
+}
+
+.embed-nav a.active {
+	border-radius: 6px;
+}
+
+.embed-nav a.active:after {
+	display: none;
+}
+
+#output pre, #output iframe {
+	background: #fff;
+	color: #000;
+}
+
+#embed-codepen-logo {
+	display: none;
+}
+
+span.on {
+	display: none;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Galaxy",
+  "author": "Andy Fang",
+  "version": "0.0.1",
+  "description": "Build anything with HTML.",
+  "repository": "https://github.com/Magmoz/galaxy",
+  "license": "MIT",
+  "homepage": "https://galaxyui.com",
+  "bugs": "https://github.com/Magmoz/galaxy/issues",
+  "contributors": "https://github.com/Magmoz/galaxy/pulls",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browser-sync": "^1.5.3",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
