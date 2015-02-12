@@ -2,12 +2,26 @@ doctype
 html
 	head
 		link(rel="stylesheet" href="galaxy/galaxy.css")
-		link(rel="stylesheet" href="styles/docs.css")
-		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css")
+		//- link(rel="stylesheet" href="onepage-scroll/onepage-scroll.css")
+		link(rel="stylesheet", href="//cloud.typography.com/6579472/723444/css/fonts.css")
+		script(src="jquery.js")
+		//- script(src="onepage-scroll/jquery.onepage-scroll.js")
+		script(src="docs.js")
+		script(src="https://galaxyui.com/js/prism.js")
 
-	body
+	body(ondragstart="return false")
+		header
+			ul
+				li
+					a(href="//www.bnotions.com")
+						img(src="media/logo.svg" width="130")
+				li
+					a(href="http://www.bnotions.com/insights/") Stories
+				li
+					a(href="https://medium.com/bnotions") Screen Theory
+
 		!= yield
 
-		script(src="//code.jquery.com/jquery.min.css")
-		script(src="https://galaxyui.com/js/prism.js")
-		script(async src="//assets.codepen.io/assets/embed/ei.js")
+		footer(g="md-margin-t")
+			ul(g="md-container lg-padding-tb centered")
+				li <a href="https://twitter.com/BNOTIONS" class="twitter-follow-button" data-show-count="false">Follow @BNOTIONS</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
