@@ -1495,4 +1495,14 @@ button {
     transition-duration: .1s;
     border-color: transparent !important; }
 
+[data-tooltip]:before {
+  bottom: -111%;
+  left: 67%; }
+[data-tooltip]:after {
+  border-top: 7px solid transparent;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #000;
+  bottom: -35%; }
+
 /*# sourceMappingURL=galaxy.css.map */
