@@ -41,12 +41,14 @@ Behind the scenes, **State Toggle** handles:
 
 ## State Toggle Attributes
 
-| st-group | Does a thing |
-| st-role | Does a thing |
-| st-state | Does a thing |
-| st-remove | Does a thing |
-| st-contain | Does a thing |
-| st-ready | Does a thing |
-| st-restrict | Does a thing |
-| st-default | Does a thing |
+Attribute | Function
+--------- | --------
+st-group | Does a thing
+st-role | Does a thing
+st-state | Does a thing
+st-remove | Does a thing
+st-contain | Does a thing
+st-ready | Does a thing
+st-restrict | Does a thing
+st-default | Does a thing
 
