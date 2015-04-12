@@ -16,6 +16,8 @@ Control the visual state of related Interface Elements using class-based CSS pro
 <div>Target</div>
 ```
 
+![HTML and CSS for demo creating Trigger and Target Elements](docs/elements.png "Creating Trigger and Target Elements")
+
 ### 2. Create the CSS for the before and after state of the target
 
 #### Before
@@ -33,6 +35,7 @@ div.active {
    background: yellow; 
 }
 ```
+![HTML and CSS for demo 'After' state](docs/elements_active.png "Creating the 'After' state for the Target Element")
 
 ### 3. Apply State Toggle Attributes to the Elements to take care of the toggle
 #### Apply st-group to the trigger and target
@@ -60,6 +63,7 @@ div.active {
 <button st-group="demo" st-role="trigger" st-state="active">Button</button>
 ```
 
+![HTML and CSS for demo with State Toggle attributes applied](docs/elements_full_code.png "Applying the State Toggle attributes to make the interaction work")
 
 ## User Guide
 
