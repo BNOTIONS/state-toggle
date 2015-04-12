@@ -9,11 +9,11 @@ Control the visual state of related Interface Elements using class-based CSS pro
 ### Create the HTML elements that affect each other
 1. trigger
 ```
-&lt;button&gt;Button&lt;/button&gt;
+<button>Button</button>
 ```
 2. target
 ```
-&lt;div&gt;Target&lt;/div&gt;
+<div>Target</div>
 ```
 
 ### Create the CSS for the before and after state of the target
@@ -38,25 +38,25 @@ div.active {
 1. Apply st-group to the trigger and target
 
 ```
-&lt;button st-group="demo"&gt;Button&lt;/button&gt;
+<button st-group="demo">Button</button>
 ```
 
 ```
-&lt;div st-group="demo"&gt;Target&lt;/div&gt;
+<div st-group="demo">Target</div>
 ```
 
 2. Define the roles of the trigger and target
 ```
-&lt;button st-group="demo" st-role="trigger"&gt;Button&lt;/button&gt;
+<button st-group="demo" st-role="trigger">Button</button>
 ```
 
 ```
-&lt;div st-group="demo" st-role="target&gt;Target&lt;/div&gt;
+<div st-group="demo" st-role="target>Target</div>
 ```
 
 3. Define the state that is being toggled on the target element
 ```
-&lt;button st-group="demo" st-role="trigger" st-state="active"&gt;Button&lt;/button&gt;
+<button st-group="demo" st-role="trigger" st-state="active">Button</button>
 ```
 
 
