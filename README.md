@@ -3,6 +3,48 @@
 *A utility to create relationships between elements without writing any custom Javascript.*
 
 ----
+## Quick Start
+Control the visual state of related Interface Elements using class-based CSS properties.
+
+### Create the HTML elements that affect each other
+1. trigger
+```&lt;button&gt;Button&lt;/button&gt;```
+2. target
+```&lt;div&gt;Target&lt;/div&gt;```
+
+### Create the CSS for the before and after state of the target
+
+1. before
+```
+div {
+    width: 100px;
+    height: 100px;
+    background: black;
+}
+```
+
+2. after
+```
+div.active {
+   background: yellow; 
+}
+```
+
+### Apply State Toggle Attributes to the Elements to take care of the toggle
+1. Apply st-group to the trigger and target
+
+```&lt;button st-group="demo"&gt;Button&lt;/button&gt;```
+
+```&lt;div st-group="demo"&gt;Target&lt;/div&gt;```
+
+2. Define the roles of the trigger and target
+```&lt;button st-group="demo" st-role="trigger"&gt;Button&lt;/button&gt;```
+
+```&lt;div st-group="demo" st-role="target&gt;Target&lt;/div&gt;```
+
+3. Define the state that is being toggled on the target element
+```&lt;button st-group="demo" st-role="trigger" st-state="active"&gt;Button&lt;/button&gt;```
+
 
 It is a routine situation to have an Interface that features two or more interface elements that have an effect on each other.
 
