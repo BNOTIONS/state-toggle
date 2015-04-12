@@ -6,7 +6,7 @@
 * [About State Toggle](https://github.com/BNOTIONS/state-toggle/tree/feature/docs#about-state-toggle "About State Toggle")
 * [Quick Reference Table](https://github.com/BNOTIONS/state-toggle/tree/feature/docs#state-toggle-attributes---quick-reference-table "Quick Reference Table")
 * [Detailed Reference](https://github.com/BNOTIONS/state-toggle/tree/feature/docs#state-toggle-attributes---detailed-reference "Detailed Reference")
-* [Credits](https://github.com/BNOTIONS/state-toggle/tree/feature/docs#roadmap "Roadmap")
+* [Roadmap](https://github.com/BNOTIONS/state-toggle/tree/feature/docs#roadmap "Roadmap")
 * [Credits](https://github.com/BNOTIONS/state-toggle/tree/feature/docs#credits "Credits")
 * [License](https://github.com/BNOTIONS/state-toggle/tree/feature/docs#license "License")
 
