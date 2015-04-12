@@ -37,8 +37,6 @@ div.active {
 ### 3. Apply State Toggle Attributes to the Elements to take care of the toggle
 #### Apply st-group to the trigger and target
 
-<iframe height='230' scrolling='no' src='//codepen.io/markreale/embed/6e6625ec688c8d7dbfbcfdb699961272/?height=230&theme-id=0' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/markreale/pen/6e6625ec688c8d7dbfbcfdb699961272/'>6e6625ec688c8d7dbfbcfdb699961272</a> by Mark Reale (<a href='http://codepen.io/markreale'>@markreale</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
 
 ```
 <button st-group="demo">Button</button>
