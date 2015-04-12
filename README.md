@@ -110,13 +110,16 @@ Behind the scenes, **State Toggle** handles:
 
 ## State Toggle Attributes - Quick Reference Table
 
+### Required Attributes
 | Attribute | Function |
 | --------- | -------- |
-| Required Attributes |
 | st-group | Declares elements are in a related group. Elements in the same group must have the same value set to this attribute. |
 | st-role | Declares the role that the element plays in the interactive group. Value can be set to either __trigger__ or __target__. |
 | st-state | Declares the state that should be toggled as a __class__ attribute on the *target*. This can be set to any value valid for a class | attribute. |
-| Optional Attributes |
+
+### Optional Attributes
+| Attribute | Function |
+| --------- | -------- |
 | st-remove | Declares which __class__ attribute *state* should be removed from other elements in the interface when an element is triggered. This should be set to any relevant class attribute. |
 | st-contain | Declares whether a State Toggle relationship has been scoped or contained (other elements not within the declared scope will not be affected). This can be set to any value (or left with no value). |
 | st-ready | Declares whether or not the trigger is 'active' (if the trigger is able to toggle the target). This attribute can be set to the 'trigger' element and set to __false__ if disabled, or __true__ if enabled. |
