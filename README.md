@@ -6,7 +6,7 @@
 ## Quick Start
 Control the visual state of related Interface Elements using class-based CSS properties.
 
-### Create the HTML elements that affect each other
+### 1. Create the HTML elements that affect each other
 #### Trigger
 ```
 <button>Button</button>
@@ -16,7 +16,7 @@ Control the visual state of related Interface Elements using class-based CSS pro
 <div>Target</div>
 ```
 
-### Create the CSS for the before and after state of the target
+### 2. Create the CSS for the before and after state of the target
 
 #### Before
 ```
@@ -34,7 +34,7 @@ div.active {
 }
 ```
 
-### Apply State Toggle Attributes to the Elements to take care of the toggle
+### 3. Apply State Toggle Attributes to the Elements to take care of the toggle
 #### Apply st-group to the trigger and target
 
 ```
