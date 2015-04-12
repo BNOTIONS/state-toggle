@@ -6,8 +6,9 @@
 * [About State Toggle](https://github.com/BNOTIONS/state-toggle/tree/feature/docs#about-state-toggle "About State Toggle")
 * [Quick Reference Table](https://github.com/BNOTIONS/state-toggle/tree/feature/docs#state-toggle-attributes---quick-reference-table "Quick Reference Table")
 * [Detailed Reference](https://github.com/BNOTIONS/state-toggle/tree/feature/docs#state-toggle-attributes---detailed-reference "Detailed Reference")
+* [Credits](https://github.com/BNOTIONS/state-toggle/tree/feature/docs#roadmap "Roadmap")
 * [Credits](https://github.com/BNOTIONS/state-toggle/tree/feature/docs#credits "Credits")
-* [License](https://github.com/BNOTIONS/state-toggle/tree/feature/docs#License "License")
+* [License](https://github.com/BNOTIONS/state-toggle/tree/feature/docs#license "License")
 
 ----
 ## Quick Start
@@ -161,6 +162,18 @@ This can be applied to a trigger to declare whether the trigger is only able to 
 
 This can be set to the trigger element to declare whether the trigger should be in its __activate__ or __inactive__ state by default. 
 
+## Roadmap
+There are a few things on the roadmap right now:
+* finish the detailed version of these docs
+* see if Zach wants to improve the logo
+* get rid of the dependency on jQuery (even though we like jQuery)
+* add a minified version of the latest code to the repo
+* support events other than 'click'
+* assess touch events vs click events for touchscreens
+* continue testing performance of event binding
+* assemble more literature around planning interactive states in interfaces
+* more demos
+
 ## Credits
 The crew at [BNOTIONS](http://bnotions.com "BNOTIONS") put this together. We build a lot of Interfaces, and this tool got us all excited and has saved us boatloads of time.
 
@@ -170,6 +183,7 @@ This tool was born from a perfect storm of sorts:
 * our product designers are not shy about getting their hands in the code, and we like to provide them with more ways to express themselves
 * we do a lot of Hackathons, and we like the idea of building a tool that could excel in both a Hackathon and Production environment
 * AngularJS brought some thoughts about how else we could take advantage of the declarative power of attributes on HTML elements
+* we run a lot of workshops and recognize that people who want to build cool, interactive stuff may not need to learn Javascript (*gasp*)
 
 Big ups to Shawn Connors, Zach Forrester, Peter Organa, Azhar Khan, Andy Fang, Nick Karch, Liane Reale, Solomon Hsu, and Mark Reale for putting this together, kicking the tires, building demos, and providing insights.
 
