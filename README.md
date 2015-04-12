@@ -1,4 +1,4 @@
-# State Toggle
+![State Toggle Logo](docs/images/state-toggle_logo.png "State Toggle Logo")
 
 *A utility to create relationships between elements without writing any custom Javascript.*
 
