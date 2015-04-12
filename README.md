@@ -60,6 +60,8 @@ div.active {
 ```
 
 
+## User Guide
+
 It is a routine situation to have an Interface that features two or more interface elements that have an effect on each other.
 
 > *Click __this__ element, and something happens to __that__ element.*
