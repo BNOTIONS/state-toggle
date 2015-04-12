@@ -37,6 +37,9 @@ div.active {
 ### 3. Apply State Toggle Attributes to the Elements to take care of the toggle
 #### Apply st-group to the trigger and target
 
+<p data-height="230" data-theme-id="0" data-slug-hash="6e6625ec688c8d7dbfbcfdb699961272" data-default-tab="result" data-user="markreale" class='codepen'>See the Pen <a href='http://codepen.io/markreale/pen/6e6625ec688c8d7dbfbcfdb699961272/'>6e6625ec688c8d7dbfbcfdb699961272</a> by Mark Reale (<a href='http://codepen.io/markreale'>@markreale</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
 ```
 <button st-group="demo">Button</button>
 ```
