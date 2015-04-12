@@ -16,8 +16,6 @@ Control the visual state of related Interface Elements using class-based CSS pro
 <div>Target</div>
 ```
 
-![HTML and CSS for demo creating Trigger and Target Elements](docs/images/elements.png "Creating Trigger and Target Elements")
-
 ### 2. Create the CSS for the before and after state of the target
 
 #### Before
@@ -28,6 +26,8 @@ div {
     background: black;
 }
 ```
+
+![HTML and CSS for demo creating Trigger and Target Elements](docs/images/elements.png "Creating Trigger and Target Elements")
 
 #### After
 ```
