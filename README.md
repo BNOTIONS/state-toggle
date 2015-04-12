@@ -7,18 +7,18 @@
 Control the visual state of related Interface Elements using class-based CSS properties.
 
 ### Create the HTML elements that affect each other
-1. trigger
+#### Trigger
 ```
 <button>Button</button>
 ```
-2. target
+#### Target
 ```
 <div>Target</div>
 ```
 
 ### Create the CSS for the before and after state of the target
 
-1. before
+#### Before
 ```
 div {
     width: 100px;
@@ -27,7 +27,7 @@ div {
 }
 ```
 
-2. after
+#### After
 ```
 div.active {
    background: yellow; 
@@ -35,7 +35,7 @@ div.active {
 ```
 
 ### Apply State Toggle Attributes to the Elements to take care of the toggle
-1. Apply st-group to the trigger and target
+#### Apply st-group to the trigger and target
 
 ```
 <button st-group="demo">Button</button>
@@ -45,7 +45,7 @@ div.active {
 <div st-group="demo">Target</div>
 ```
 
-2. Define the roles of the trigger and target
+#### Define the roles of the trigger and target
 ```
 <button st-group="demo" st-role="trigger">Button</button>
 ```
@@ -54,7 +54,7 @@ div.active {
 <div st-group="demo" st-role="target>Target</div>
 ```
 
-3. Define the state that is being toggled on the target element
+#### Define the state that is being toggled on the target element
 ```
 <button st-group="demo" st-role="trigger" st-state="active">Button</button>
 ```
