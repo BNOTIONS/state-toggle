@@ -2,24 +2,30 @@
 
 *A utility to create relationships between elements without writing any custom Javascript.*
 
+* [Quick Start](http://example.com/ "Title")
+* [About State Toggle](http://example.com/ "Title")
+* [Quick Reference Table](http://example.com/ "Title")
+* [Detailed Reference](http://example.com/ "Title")
+
+
 ----
 ## Quick Start
 Control the visual state of related Interface Elements using class-based CSS properties.
 
 ### 1. Create the HTML elements that affect each other
 #### Trigger
-```
+```html
 <button>Button</button>
 ```
 #### Target
-```
+```html
 <div>Target</div>
 ```
 
 ### 2. Create the CSS for the before and after state of the target
 
 #### Before
-```
+```css
 div {
     width: 100px;
     height: 100px;
@@ -30,7 +36,7 @@ div {
 ![HTML and CSS for demo creating Trigger and Target Elements](docs/images/elements.png "Creating Trigger and Target Elements")
 
 #### After
-```
+```css
 div.active {
    background: yellow; 
 }
@@ -41,31 +47,31 @@ div.active {
 #### Apply st-group to the trigger and target
 
 
-```
+```html
 <button st-group="demo">Button</button>
 ```
 
-```
+```html
 <div st-group="demo">Target</div>
 ```
 
 #### Define the roles of the trigger and target
-```
+```html
 <button st-group="demo" st-role="trigger">Button</button>
 ```
 
-```
+```html
 <div st-group="demo" st-role="target>Target</div>
 ```
 
 #### Define the state that is being toggled on the target element
-```
+```html
 <button st-group="demo" st-role="trigger" st-state="active">Button</button>
 ```
 
 ![HTML and CSS for demo with State Toggle attributes applied](docs/images/elements_full_code.png "Applying the State Toggle attributes to make the interaction work")
 
-## User Guide
+## About State Toggle
 
 It is a routine situation to have an Interface that features two or more interface elements that have an effect on each other.
 
@@ -102,18 +108,20 @@ Behind the scenes, **State Toggle** handles:
 * scope control to be able to create multiple instances in an interface, or contain the scope of interaction for whatever reason
 * ability to control the default state of a toggle group
 
-## State Toggle Attributes - Quick Reference
+## State Toggle Attributes - Quick Reference Table
 
-Attribute | Function
---------- | --------
-st-group | Declares elements are in a related group. Elements in the same group must have the same value set to this attribute.
-st-role | Declares the role that the element plays in the interactive group. Value can be set to either __trigger__ or __target__.
-st-state | Declares the state that should be toggled as a __class__ attribute on the *target*. This can be set to any value valid for a class attribute.
-st-remove | Declares which __class__ attribute *state* should be removed from other elements in the interface when an element is triggered. This should be set to any relevant class attribute.
-st-contain | Declares whether a State Toggle relationship has been scoped or contained (other elements not within the declared scope will not be affected). This can be set to any value (or left with no value).
-st-ready | Declares whether or not the trigger is 'active' (if the trigger is able to toggle the target). This attribute can be set to the 'trigger' element and set to __false__ if disabled, or __true__ if enabled.
-st-restrict | This can be applied to a trigger to declare whether the trigger is only able to toggle a target to either the 'off' or 'on' state. Valid values that this attribute can be set to are __on__ or __off__.
-st-default | This can be set to the trigger element to declare whether the trigger should be in its __activate__ or __inactive__ state by default. Active triggers have the __class__ attribute set to __st-activated__.
+| Attribute | Function |
+| --------- | -------- |
+| Required Attributes |
+| st-group | Declares elements are in a related group. Elements in the same group must have the same value set to this attribute. |
+| st-role | Declares the role that the element plays in the interactive group. Value can be set to either __trigger__ or __target__. |
+| st-state | Declares the state that should be toggled as a __class__ attribute on the *target*. This can be set to any value valid for a class | attribute. |
+| Optional Attributes |
+| st-remove | Declares which __class__ attribute *state* should be removed from other elements in the interface when an element is triggered. This should be set to any relevant class attribute. |
+| st-contain | Declares whether a State Toggle relationship has been scoped or contained (other elements not within the declared scope will not be affected). This can be set to any value (or left with no value). |
+| st-ready | Declares whether or not the trigger is 'active' (if the trigger is able to toggle the target). This attribute can be set to the 'trigger' element and set to __false__ if disabled, or __true__ if enabled. |
+| st-restrict | This can be applied to a trigger to declare whether the trigger is only able to toggle a target to either the 'off' or 'on' state. Valid values that this attribute can be set to are __on__ or __off__. |
+| st-default | This can be set to the trigger element to declare whether the trigger should be in its __activate__ or __inactive__ state by default. Active triggers have the __class__ attribute set to __st-activated__. |
 
 ## State Toggle Attributes - Detailed Reference
 
